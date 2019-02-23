@@ -599,6 +599,7 @@ ZEUR
 Entregamos su paquete en 24h.  
 
 (c) 2016, 2019 KMBR.
+Release 2. 
 /2 
 No veo nada de particular.
 /3

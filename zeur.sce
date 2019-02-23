@@ -387,6 +387,8 @@ cagar    47     verb
 CHUPAR   48     verb
 lamer    48     verb
 cantar   49     verb
+paper    50     verb
+ink      51     verb
 ;   Adjetives
 PEQUE   2       adjective
 GRANDE  3       adjective
@@ -598,8 +600,8 @@ ZEUR
 
 Entregamos su paquete en 24h.  
 
-(c) 2016, 2019 KMBR.
-Release 2. 
+(c) 2016, 2019 KMBR. Release 2.
+
 /2 
 No veo nada de particular.
 /3
@@ -925,6 +927,10 @@ un traje presurizado
 la compuerta de la esclusa
 /3
 La entrada al almac‚n
+/4 
+un bot¢n rojo
+/5
+un bot¢n verde
 ;       -       -       -       -       -       -       -       -       -
 /LTX    ;Location Texts
 /0
@@ -996,8 +1002,10 @@ E 7
 ;num    at
 /0      8       1       Y _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    CAJA  AZUL
 /1      3       2       _ Y  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    TRAJE _
-/2   lesclusa  10      _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    esclu _
-/3   lalmacen  10      _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    puert _
+/2   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ N _    esclu _
+/3   lalmacen  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ N _    puert _
+/4   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton ROJO
+/5   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton VERDE
 ;------------------------------------------------------------------------------
 /PRO 0       ;Main Location Loop
 
@@ -1359,8 +1367,8 @@ _       _       WINDOW  1               ; Inicializamos las ventanas
                 WINAT   5       0       ; line, col
                 WINSIZE 4      13     ; Tama¤o m ximo height, width                
                 CENTRE
-                PAPER   AZUL
-                INK     NEGRO
+                PAPER   cAZUL
+                INK     cNEGRO
                 CLS
                 NEWLINE
                 MES 0                                            
@@ -1370,8 +1378,8 @@ _       _       WINDOW  1               ; Inicializamos las ventanas
 _   _           WINDOW  0
                 WINAT   0     0
                 WINSIZE 1     127
-                PAPER   BLANCO
-                INK     NEGRO
+                PAPER   cAMARILLO
+                INK     cNEGRO
                 CLS
                 WINSIZE 1     20
                 CENTRE
@@ -1379,8 +1387,8 @@ _   _           WINDOW  0
                 MES 3
                 WINAT   1       0
                 WINSIZE 23      127
-                INK     BLANCO
-                PAPER   NEGRO
+                INK     cBLANCO
+                PAPER   cNEGRO
                 CLS
                 MESSAGE 1
                 NEWLINE  
@@ -1390,7 +1398,7 @@ _       _       NOTEQ   255     GFlags  ; menos GFlags!!!
 
 _       _       PLUS    255     1
                 LT      255     255     ; Al final lo dejamos con valor 255
-                SKIP    -1              ; para indicer que hemos inicializado
+                SKIP    -1              ; Bucle de salto para inicializar todos los FLAG
 
 _       _       RESET                   ; Objetos a su loc. inicial / Flag 1
                 LET     Strength 10

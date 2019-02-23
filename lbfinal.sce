@@ -1,0 +1,4 @@
+PAPER BLANCO PAPER cBLANCO
+             DONE
+INK   NEGRO  INK cNEGRO
+             DONE

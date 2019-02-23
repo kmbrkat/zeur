@@ -3,19 +3,16 @@ ZEUR
 TODO: 
 	- Eliminar mensajes de 'Qué quieres que haga'... 
 	- Completar todas las descripciones 
-	- La compuerta de mando ya funciona
+	- La compuerta de mando ya funciona con los botones verde y rojo
 	- Poner/quitarse el traje
 	- Teclado numérico funciona
 	- Listar el inventario en fila añadiendo (puesto), (encendido),etc
 	- Menú de ayuda 
-	- ¿Se podría meter ASCII Art en el juego?
 	- Poder escoger PAPER e INK mientras se juega
 
 23.02.2019
 > He probado a generar una versión para spectrum y funciona!!! :-D
 > Ya tenemos repositorio en GitHub para que el código no se pierda como pasó ayer con el Synctoy y el portátil
-
-
 
 
 21.02.2019 

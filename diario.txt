@@ -1,7 +1,7 @@
 ZEUR 
 ====================
 TODO: 
-	- Eliminar mensajes de 'Qué quieres que haga'... 
+
 	- Completar todas las descripciones 
 	- La compuerta de mando ya funciona con los botones verde y rojo
 	- Poner/quitarse el traje
@@ -10,10 +10,12 @@ TODO:
 	- Menú de ayuda 
 	- Poder escoger PAPER e INK mientras se juega
 
+24.02.2019 
+
 23.02.2019
 > He probado a generar una versión para spectrum y funciona!!! :-D
 > Ya tenemos repositorio en GitHub para que el código no se pierda como pasó ayer con el Synctoy y el portátil
-
++ Eliminar mensajes de 'Qué quieres que haga'... 
 
 21.02.2019 
 + Bug delas conexiones solucionado. Es debido a que tenía una entrada para imprimir verbo y nombre sin DONE. He añadido una entrada al final como NOTDONE

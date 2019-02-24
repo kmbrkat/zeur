@@ -1,7 +1,11 @@
 ; Definiciones por defecto para atributos de objeto
+; Note; Symbols in the format GA_xxx are the attribute test  values 
+; for  HASAT/HASNAT  testing, while GO_xxx is the  number  used  to 
+; set/clear (using PLUS/MINUS) the bit.
 ;#define aLight 0
 ;#define aNPC  1
-#define aConcealed 0
+#define GA_Concealed 0
+#define GO_Concealed 1 ; 2^0
 ;#define aEdible 3
 ;#define aDrinkable 4
 ;#define aEnterable 5
@@ -10,16 +14,20 @@
 ;#define aMale 8
 ;#define aNeuter 9
 ;#define aOpenable 10
-#define aOpen 1
+#define GA_Open 1
+#define GO_Open 2 ; 2^1
 ;#define aPluralName  12
 ;#define aTransparent 13
 ;#define aScenery  14
 ;#define aSupporter  15
 ;#define aSwitchable  19
-#define aOn  2
-#define aStatic  3
+#define GA_On  2
+#define GO_On  4 ; 2^2 
+#define GA_Static  3
+#define GO_Statis 8 ; 2^2
 ;#define aHABLADO 22
-#define aEXAMINADO 4
+#define GA_Examinado 4
+#define GO_Examinado 16; 2^4
 ;#define aCOGIDO 24
 ;#define aDEJADO 25
 ;#define aVOLCADO 26
@@ -41,6 +49,10 @@
 ; Objetos
 #define oCaja 0
 #define oTraje 1
+#define oEsclusa 2
+#define oPuerta 3
+#define obotonrojo 4
+#define obotonverde 5
 ; Colores
 #IF SPE 
 #define cNEGRO 0

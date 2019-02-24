@@ -657,9 +657,13 @@ Pulsar para cerrar la esclusa.
 /28
 -La esclusa ya est  abierta.
 /29
--Abriendo compuerta exterior y aislando el interior. -dice el ordenador. [line break] La compuerta exterior se abre con un siseo mientras se igualan las presiones.
+-Abriendo compuerta exterior y aislando el interior. -dice el ordenador. 
+\k
+La compuerta exterior se abre con un siseo mientras se igualan las presiones.
 /30
--Cerrando compuerta exterior.[line break] Una vez la compuerta exterior se ha cerrado, unos chorros de aire a presi¢n surgen de las paredes para eliminar los contaminantes e igualar de nuevo la presi¢n.
+-Cerrando compuerta exterior- repite el ordenador
+\k
+Una vez la compuerta exterior se ha cerrado, unos chorros de aire a presi¢n surgen de las paredes para eliminar los contaminantes e igualar de nuevo la presi¢n.
 /31
 Un panel se abre y permite el acceso al interior de la nave.
 /32
@@ -917,6 +921,12 @@ Desciendes los escalones a la bodega y depositas el paquete junto a los dem s pe
 Lo m s duro es tener que reciclar sus piezas para la siguiente misi¢n. Llegan a creerse humanos. En fin... -suspira el ordenador mientras recoge los restos de tu cuerpo con una robofregona.
 \k
 -Central, aqu¡ Tod Connor. -dice la voz- Volvemos a Marte con el paquete. Repito volvemos con el paquete. 
+/172 
+Hay dos botones: rojo y verde. Se utilizan para cerrar y abrir la esclusa al exterior. 
+/173  
+Paquetes que esperan su entrega.
+/174 
+No es momento de jugar al Sokoban.
 ;       -       -       -       -       -       -       -       -       -
 /OTX    ;Object Texts
 /0
@@ -1198,28 +1208,121 @@ _   _   AT lnodo
         DONE 
 ; Esclusa
 ; Puzzle de la esclusa y ponerse el traje...
-salir 
+IR Exterior SYNONYM SALIR _
+; Salir, compuerta cerrada...
+salir _   AT lesclusa
+          SETCO oEsclusa          
+          HASNAT aOpen
+          MES 24
+          MESSAGE 22
+          DONE       
 
-IR exterior
+; Salir, No lleva el traje...
+salir _   AT lesclusa
+          NOTWORN oTraje
+          MESSAGE 19
+          DONE    
 
-IR nodo 
+; Salir con ‚xito...
+salir _   AT lesclusa
+          SETCO oEsclusa
+          HASAT aOpen
+          WORN oTraje
+          GOTO lexterior
+          DESC
+          DONE          
 
-ABRIR esclusa 
-ABRIR puerta
-ABRIR compuerta
+IR nodo AT lesclusa
+        WORN oTraje
+        MESSAGE 20
+        DONE 
 
-EX compuerta
+IR nodo AT lesclusa 
+        NOTWORN oTraje
+        GOTO lnodo
+        DESC
+        DONE 
 
-ex boton 
+ABRIR puerta SYNONYM abrir esclusa
+ABRIR compuerta SYNONYM abrir esclusa
 
-ex boton verde 
+ABRIR esclusa AT lesclusa 
+              MESSAGE 24
+              DONE
 
-ex boton rojo
+CERRAR esclusa AT lesclusa 
+                MESSAGE 25
+                DONE 
 
-pulsa boton rojo
+EX compuerta AT lesclusa
+             MES 21 
+             SETCO oEsclusa 
 
-pulsa boton verde 
+EX compuerta AT lesclusa 
+             HASAT GA_Open
+             MESSAGE 23
+             DONE 
 
+EX compuerta AT lesclusa
+             HASNAT GA_Open
+             MESSAGE 22
+             DONE 
+
+ex boton     AT lesclusa
+             MESSAGE 172 
+             DONE 
+
+ex boton verde AT lesclusa 
+               MESSAGE 26
+               DONE
+
+ex boton rojo AT lesclusa 
+              MESSAGE 27 
+              DONE
+; Cerrar esclusa
+; Ya est  cerrada...
+pulsa boton   ADJECT1 rojo
+              AT lesclusa 
+              SETCO oEsclusa
+              HASNAT GA_Open 
+              MESSAGE 32
+              DONE
+
+; Cierra la esclusa...  
+pulsa boton   ADJECT1 rojo
+              AT lesclusa 
+              SETCO oEsclusa
+              HASAT GA_Open 
+              PLUS  COAtt GO_Open ; Set to OPEN=1
+              MESSAGE 30
+              DONE
+; Abrir esclusa...
+; Pero ya est  abierta...
+pulsa boton ADJECT1 verde 
+            AT lesclusa 
+            SETCO oEsclusa 
+            HASAT aOpen 
+            MESSAGE 28
+            DONE 
+
+; Pero no tienes puesto el traje...
+pulsa boton ADJECT1 verde 
+            AT lesclusa 
+            SETCO oEsclusa 
+            HASNAT aOpen 
+            NOTWORN OTraje
+            MESSAGE 19
+            DONE 
+
+; Abre la esclusa...
+pulsa boton ADJECT1 verde 
+            AT lesclusa 
+            SETCO oEsclusa 
+            HASNAT aOpen 
+            WORN OTraje
+            MESSAGE 29
+            MINUS  COAtt GO_Open ; set to Open=0
+            DONE 
 
 ; Bodega de la nave
 ; Aqu¡ se termina el juego... 
@@ -1229,26 +1332,41 @@ _   _   AT lbodega
         ANYKEY 
         END
 
-ex paquetes 
+ex paquetes AT lbodega
+            MESSAGE 173
+            DONE
+empujar paquetes AT lbodega 
+            MESSAGE 
 
-coger paquetes 
+coger paquetes AT lbodega 
+               SYNONYM empuja paquetes
 
-empuja paquetes 
-
+empuja paquetes AT lbodega 
+                MESSAGE 174
+                DONE 
 
 ; Exterior
 
-entrar 
+entrar _ AT lexterior
+         SYNONYM ir nave 
 
-ir entrada 
 
-ir nave 
+ir almacen AT lexterior 
+           SYNONYM lentrada
+ir mole AT lexterior 
+        SYNONYM lentrada
+ir edificio AT lexterior 
+        SYNONYM lentrada
 
-ir almacen 
+ir entrada AT lexterior 
+        GOTO lentrada
+        DESC
+        DONE 
 
-ir mole
-
-ir edificio
+ir nave AT lexterior 
+        GOTO lesclusa 
+        DESC 
+        DONE
 
 ex cielo
 
@@ -1256,12 +1374,19 @@ ex tormenta
 
 ex jupiter 
 
-ex nave 
+ex nave AT lexterior 
+        MESSAGE 36
+        DONE 
 
-ex mole 
+ex mole AT lexterior 
+        MESSAGE 38
+        DONE 
 
 ; Entrada
-ir nave 
+ir nave AT lentrada 
+        GOTO lexterior 
+        DESC
+        DONE 
 
 entrar 
 
@@ -1270,9 +1395,18 @@ ex puerta
 ex compuerta 
 
 ex teclado 
-escribir 32768 
-escribir _
-ex camara 
+escribir 32768 AT lentrada 
+               Noun2 teclado 
+
+escribir _ AT lentrada 
+           EQ Noun2 NULL 
+
+ex canon AT lentrada 
+         SYNONYM ex camara 
+         
+ex camara AT lentrada   
+          PRESENT oCamara
+
 ex canon 
 
 ; Puzzle de la compuerta...

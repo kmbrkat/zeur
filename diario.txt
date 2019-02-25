@@ -13,7 +13,6 @@ TODO:
 	- Cambir la fuente típica del DAAD 
 	- Añadir colores para las conversaciones con el ordenador...
 
-
 25.02.2019 
 > Más descripciones, vocabulario y movimientos entre localidades
 > El usuario puede cambiar el color del texto y el fondo

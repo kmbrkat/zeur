@@ -1,4 +1,12 @@
-PAPER BLANCO PAPER cBLANCO
+; Opciones de color 
+PAPER _      Adject1 BLANCO
+             PAPER cBLANCO
+             CLS
+             DESC [flocation]
              DONE
-INK   NEGRO  INK cNEGRO
+
+INK   _      Adject1 NEGRO
+             INK cNEGRO
+             CLS
+             DESC [flocation]
              DONE

@@ -1,21 +1,36 @@
 ZEUR 
 ====================
 TODO: 
-
 	- Completar todas las descripciones 
+	- La comprobacion de la apertura de la compuerta no funciona
+	- Si la compuerta se abre no podemos volver al interior de la nave 
+	- No se puede ir al interior de la nave con el traje puesto. Hay que quitárselo
+	y dejarlo siempre en la esclusa. 
 	- La compuerta de mando ya funciona con los botones verde y rojo
-	- Poner/quitarse el traje
 	- Teclado numérico funciona
 	- Listar el inventario en fila añadiendo (puesto), (encendido),etc
 	- Menú de ayuda 
-	- Poder escoger PAPER e INK mientras se juega
+	- Cambir la fuente típica del DAAD 
+	- Añadir colores para las conversaciones con el ordenador...
 
-24.02.2019 
+
+25.02.2019 
+> Más descripciones, vocabulario y movimientos entre localidades
+> El usuario puede cambiar el color del texto y el fondo
+> Un poco de playtest
+
+Así a bote pronto: 32Kb de Aventura - 3Kb de la BBDD de gráficos (aunque vaya vacía)
+Databaseend 52079, en el Spectrum Editor gráfico nos dice que quedan 11367bytes
+
+Teniendo en cuenta que la aventura ya está prácticamente completa, salvo pulir
+algunos fallos quizá quepan 2 o 3 pantallas en bitmap (aprox 1.3Kb), o unas
+cuantas más vectoriales si me aclaro con el editor gráfico. 
 
 23.02.2019
 > He probado a generar una versión para spectrum y funciona!!! :-D
 > Ya tenemos repositorio en GitHub para que el código no se pierda como pasó ayer con el Synctoy y el portátil
 + Eliminar mensajes de 'Qué quieres que haga'... 
+> Poner/quitarse el traje
 
 21.02.2019 
 + Bug delas conexiones solucionado. Es debido a que tenía una entrada para imprimir verbo y nombre sin DONE. He añadido una entrada al final como NOTDONE

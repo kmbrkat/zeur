@@ -161,6 +161,9 @@ AB      11      noun
 ABAJO   11      noun
 BAJAR   11      noun
 BAJA    11      noun
+SALIR   12      noun
+SAL     12      noun
+ENTRA   13      noun
 ;                       Nombres <20 indica que se pueden usar como verbos
 ;                               <50 indica nombre propio (no admite lo, la...)
 I       14      noun
@@ -186,6 +189,7 @@ pared   58      noun
 suelo   59      noun
 techo   60      noun
 luz     61      noun
+haz     61      noun
 coman   63      noun
 instr   63      noun
 parab   64      noun
@@ -246,12 +250,13 @@ jugar   93  noun
 cancion 94  noun
 inter   95  noun
 viajar  96 noun
-entrada 97 noun
 codigo 98  noun
 central 99 noun
 zeur    100 noun
 tierra  101 noun
 almacen 102 noun
+edificio 102 noun 
+mole 102 noun
 temperatura 103 noun
 consola 104 noun
 puent   104 noun
@@ -280,7 +285,8 @@ ocio        118 noun
 fecha     119 noun
 suministros 120 noun
 paquete     121 noun
-caja        121      noun
+caja        121 noun
+contenedor  121 noun
 recoger     122 noun
 nave        123 noun
 estrellas   124 noun
@@ -321,6 +327,16 @@ nodo        172 noun
 zona        173 noun
 A1          174 noun
 A2          175 noun
+pasillo     176 noun 
+boveda      177 noun
+estanteria  178 noun
+camara      179 noun
+canon       179 noun
+32768       180 noun
+teclas      181 noun
+exterior    182 noun
+fuera       182 noun
+afuera      182 noun
 ;                       Verbs
 COGER   20      verb
 COGE    20      verb
@@ -412,6 +428,7 @@ termico 15      adjective
 frio    16      adjective
 caliente 16     adjective
 calor   16      adjective
+AMARILLO 17     adjective
 ; Adverbios
 RAPID   2       adverb
 R PID   2       adverb
@@ -438,18 +455,14 @@ LUEGO   2       conjugation
 /0
 Est  demasiado oscuro para ver nada.
 /1
-Tambien puedo ver:
+Tambien puedo ver: 
 /2
-
 ;¨Qu‚ hago ahora?
 /3
-
 ¨Qu‚ quieres que haga?
 /4
-
 ¨Qu‚ quieres que haga ahora?
 /5
-
 ¨Qu‚ hago?
 /6
 No he entendido nada.
@@ -550,7 +563,7 @@ No puedo quitarme _.  No puedo llevar nada m s en las manos.
 /46
 , 
 /47
- y
+ y 
 /48
 .
 
@@ -659,6 +672,7 @@ Pulsar para cerrar la esclusa.
 /29
 -Abriendo compuerta exterior y aislando el interior. -dice el ordenador. 
 \k
+
 La compuerta exterior se abre con un siseo mientras se igualan las presiones.
 /30
 -Cerrando compuerta exterior- repite el ordenador
@@ -726,6 +740,7 @@ El aullido del viento se infiltra por el fuselaje.
 /62
 /63
 /64
+; ================================================================
 /65 ; Hola
 -Hola, soy el ordenador de navegaci¢n. -responde una voz met lica.
 /66 ; Adios
@@ -909,6 +924,7 @@ Tema: Env¡o urgente al Tenedor de Marte. Contenido: Recogida en almac‚n en coord
 /167
 /168
 /169
+; ================================================================
 /170
 -Buen trabajo -aprueba la voz satisfecha del ordenador.  \k 
 -Ahora es momento de poner rumbo a Marte. Baja a la bodega de carga mientras reinicio los sistemas de la nave. -dice el ordenador con voz imperante.
@@ -927,6 +943,12 @@ Hay dos botones: rojo y verde. Se utilizan para cerrar y abrir la esclusa al ext
 Paquetes que esperan su entrega.
 /174 
 No es momento de jugar al Sokoban.
+/175 
+-Voolare... ooh oooh -te devuelve cruel el eco de la nave.
+/176
+-Cantare, ooh oooh -intentas entonar
+
+-Nel blu dipinto di blu...
 ;       -       -       -       -       -       -       -       -       -
 /OTX    ;Object Texts
 /0
@@ -941,6 +963,8 @@ La entrada al almac‚n
 un bot¢n rojo
 /5
 un bot¢n verde
+/6
+un ca¤¢n de vigilancia
 ;       -       -       -       -       -       -       -       -       -
 /LTX    ;Location Texts
 /0
@@ -957,7 +981,7 @@ Esclusa
 
 La esclusa es el sistema de intercambio de presi¢n entre el exterior y la zona habitable de la nave.
 /4 ; Bodega de carga
-Bode de carga
+Bodega de carga
 
 La zona de carga de la nave justifica la existencia de esta nave. Tiene espacio suficiente para atender los t¡picos env¡os entre particulares en un sistema. Hay varios paquetes que esperan su entrega. 
 /5 ; Exterior de la nave
@@ -1008,14 +1032,20 @@ E 7
 /OBJ    ;Objetos
 ; c-> Container, w -> Wearable
 ; Starts: LTC, WORN, CARRIED or 252=NOT CREATED, 253 WORN, 254 CARRIED
+; #define GA_Concealed 0
+; #define GA_Open 1
+; #define GA_On  2
+; #define GA_Static  3
+; #define GA_Examinado 4
 ;obj  starts  weight    c w  5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0    noun   adjective
 ;num    at
 /0      8       1       Y _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    CAJA  AZUL
 /1      3       2       _ Y  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    TRAJE _
-/2   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ N _    esclu _
-/3   lalmacen  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ N _    puert _
+/2   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    esclu _
+/3   lalmacen  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    puert _
 /4   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton ROJO
 /5   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton VERDE
+/6   NOTCREATED 10      _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    canon _
 ;------------------------------------------------------------------------------
 /PRO 0       ;Main Location Loop
 
@@ -1138,8 +1168,13 @@ escuchar _      ATLT lexterior
                 MES 57
                 DONE
 
-cantar  _       MES 
+cantar  _       ATLT lexterior 
+                MES 175
                 DONE
+
+cantar  _       MES 176
+                DONE
+
 ; Descripciones en funci¢n de la localidad...
 ; Puente de mando
 EX sistema      Adject1 termico 
@@ -1187,19 +1222,18 @@ EX escaleras    AT lnodo
                 
 IR puente       AT lnodo
                 GOTO lpuente
-                DESC [flocalidad]              
+                DESC [flocation]              
                 DONE 
 
 IR esclusa      AT lnodo
                 GOTO lesclusa
-                DESC [flocalidad]
+                DESC [flocation]
                 DONE
 
 IR bodega   AT lnodo
             GOTO lbodega
-            DESC [flocalidad] 
+            DESC [flocation] 
             DONE
-EX luz 
 
 _   _   AT lnodo
         CARRIED oCaja
@@ -1212,7 +1246,7 @@ IR Exterior SYNONYM SALIR _
 ; Salir, compuerta cerrada...
 salir _   AT lesclusa
           SETCO oEsclusa          
-          HASNAT aOpen
+          HASNAT GA_Open
           MES 24
           MESSAGE 22
           DONE       
@@ -1226,10 +1260,10 @@ salir _   AT lesclusa
 ; Salir con ‚xito...
 salir _   AT lesclusa
           SETCO oEsclusa
-          HASAT aOpen
+          HASAT GA_Open
           WORN oTraje
           GOTO lexterior
-          DESC
+          DESC [flocalidad]
           DONE          
 
 IR nodo AT lesclusa
@@ -1240,7 +1274,7 @@ IR nodo AT lesclusa
 IR nodo AT lesclusa 
         NOTWORN oTraje
         GOTO lnodo
-        DESC
+        DESC [flocalidad]
         DONE 
 
 ABRIR puerta SYNONYM abrir esclusa
@@ -1272,11 +1306,13 @@ ex boton     AT lesclusa
              MESSAGE 172 
              DONE 
 
-ex boton verde AT lesclusa 
+EX boton Adject1 verde
+               AT lesclusa 
                MESSAGE 26
                DONE
 
-ex boton rojo AT lesclusa 
+EX boton Adject1 rojo 
+              AT lesclusa 
               MESSAGE 27 
               DONE
 ; Cerrar esclusa
@@ -1301,7 +1337,7 @@ pulsa boton   ADJECT1 rojo
 pulsa boton ADJECT1 verde 
             AT lesclusa 
             SETCO oEsclusa 
-            HASAT aOpen 
+            HASAT GA_Open 
             MESSAGE 28
             DONE 
 
@@ -1309,8 +1345,8 @@ pulsa boton ADJECT1 verde
 pulsa boton ADJECT1 verde 
             AT lesclusa 
             SETCO oEsclusa 
-            HASNAT aOpen 
-            NOTWORN OTraje
+            HASNAT GA_Open 
+            NOTWORN oTraje
             MESSAGE 19
             DONE 
 
@@ -1318,8 +1354,8 @@ pulsa boton ADJECT1 verde
 pulsa boton ADJECT1 verde 
             AT lesclusa 
             SETCO oEsclusa 
-            HASNAT aOpen 
-            WORN OTraje
+            HASNAT GA_Open 
+            WORN oTraje
             MESSAGE 29
             MINUS  COAtt GO_Open ; set to Open=0
             DONE 
@@ -1335,8 +1371,6 @@ _   _   AT lbodega
 ex paquetes AT lbodega
             MESSAGE 173
             DONE
-empujar paquetes AT lbodega 
-            MESSAGE 
 
 coger paquetes AT lbodega 
                SYNONYM empuja paquetes
@@ -1352,27 +1386,27 @@ entrar _ AT lexterior
 
 
 ir almacen AT lexterior 
-           SYNONYM lentrada
+           SYNONYM IR entrada
 ir mole AT lexterior 
-        SYNONYM lentrada
+        SYNONYM IR entrada
 ir edificio AT lexterior 
-        SYNONYM lentrada
+        SYNONYM IR entrada
 
 ir entrada AT lexterior 
-        GOTO lentrada
-        DESC
+        GOTO lalmacen
+        DESC [flocation]
         DONE 
 
 ir nave AT lexterior 
         GOTO lesclusa 
-        DESC 
+        DESC [flocation] 
         DONE
 
-ex cielo
+;ex cielo
 
-ex tormenta 
+;ex tormenta 
 
-ex jupiter 
+;ex jupiter 
 
 ex nave AT lexterior 
         MESSAGE 36
@@ -1383,51 +1417,51 @@ ex mole AT lexterior
         DONE 
 
 ; Entrada
-ir nave AT lentrada 
+ir nave AT lalmacen 
         GOTO lexterior 
-        DESC
+        DESC [flocation]
         DONE 
 
-entrar 
+;entrar 
 
-ex puerta 
+;ex puerta 
 
-ex compuerta 
+;ex compuerta 
 
-ex teclado 
-escribir 32768 AT lentrada 
+;ex teclado 
+; En C64 usamos 38911
+escribir 32768 AT lalmacen 
                Noun2 teclado 
 
-escribir _ AT lentrada 
+escribir _ AT lalmacen 
            EQ Noun2 NULL 
 
-ex canon AT lentrada 
+ex canon AT lalmacen 
          SYNONYM ex camara 
          
-ex camara AT lentrada   
-          PRESENT oCamara
-
-ex canon 
-
+ex camara PRESENT oCanon
+         MESSAGE 41
+         DONE  
+          
 ; Puzzle de la compuerta...
 
 ; Zona A1
-salir 
-ir exterior 
-ir a2
-ex estanterias 
-ex contenedores 
-ex techo
-ex suelo
-ex paredes 
-ex pasillo 
+;salir 
+;ir exterior 
+;ir a2
+;ex estanterias 
+;ex contenedores 
+;ex techo
+;ex suelo
+;ex paredes 
+;ex pasillo 
 
 ; Zona A2
-ex boveda 
-ex pasillo
-ir a1 
-ex estanterias 
-ex contenedores 
+;ex boveda 
+;ex pasillo
+;ir a1 
+;ex estanterias 
+;ex contenedores 
 
 ; ================= LIBRER¡A BASE FINAL ===========================================
 #include C:\zeur\lbfinal.sce

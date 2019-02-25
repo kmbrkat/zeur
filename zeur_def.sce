@@ -15,19 +15,19 @@
 ;#define aNeuter 9
 ;#define aOpenable 10
 #define GA_Open 1
-#define GO_Open 2 ; 2^1
+#define GO_Open 2 
 ;#define aPluralName  12
 ;#define aTransparent 13
 ;#define aScenery  14
 ;#define aSupporter  15
 ;#define aSwitchable  19
 #define GA_On  2
-#define GO_On  4 ; 2^2 
+#define GO_On  4 
 #define GA_Static  3
-#define GO_Statis 8 ; 2^2
+#define GO_Statis 8 
 ;#define aHABLADO 22
 #define GA_Examinado 4
-#define GO_Examinado 16; 2^4
+#define GO_Examinado 16
 ;#define aCOGIDO 24
 ;#define aDEJADO 25
 ;#define aVOLCADO 26
@@ -36,6 +36,7 @@
 #define NULL 255
 ; Flags del juego
 #define flocation 38
+#define flocalidad 38
 #define fmensaje 64
 ; Localidades
 #define lpuente 1
@@ -53,6 +54,7 @@
 #define oPuerta 3
 #define obotonrojo 4
 #define obotonverde 5
+#define oCanon 6
 ; Colores
 #IF SPE 
 #define cNEGRO 0

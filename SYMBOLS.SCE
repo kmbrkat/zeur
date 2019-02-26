@@ -79,7 +79,7 @@
 #define COWei    55
 #define COCon    56
 #define COWR     57     ; Current Object Wearable
-#define COAtt    58     ; Current Object Attributes -> Low byte, 50 -> High Byte
+#define COAtt    59     ; Current Object Attributes -> Low byte, 58 -> High Byte
 #define Key1     60
 #define Key2     61
 #define ScMode   62     ; 2=Text, 4=CGA, 13=EGA, 141=VGA

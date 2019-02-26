@@ -38,6 +38,7 @@
 #define flocation 38
 #define flocalidad 38
 #define fmensaje 64
+#define fEsclusa 65
 ; Localidades
 #define lpuente 1
 #define lnodo 2

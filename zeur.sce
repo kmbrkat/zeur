@@ -337,6 +337,7 @@ teclas      181 noun
 exterior    182 noun
 fuera       182 noun
 afuera      182 noun
+controles   183 noun
 ;                       Verbs
 COGER   20      verb
 COGE    20      verb
@@ -652,7 +653,7 @@ Est  apagada.
 /19
 -No es recomendable salir sin el traje protector -aconseja el ordenador.
 /20
--Debes quitarte el traje antes de pasar al nodo central. -te recuerda el ordenador.
+-Debido a la contaminazi¢n deja el traje antes de pasar al nodo central. -te recuerda el ordenador.
 /21
 La compuerta de la esclusa sirve para igualar la presi¢n entre el exterior y el interior de la nave. 
 /22
@@ -1242,11 +1243,18 @@ _   _   AT lnodo
         DONE 
 ; Esclusa
 ; Puzzle de la esclusa y ponerse el traje...
+_ afuera SYNONYM salir _
+
 IR Exterior SYNONYM SALIR _
+
+o _       AT lesclusa 
+          SYNONYM salir _
+
 ; Salir, compuerta cerrada...
 salir _   AT lesclusa
           SETCO oEsclusa          
-          HASNAT GA_Open
+          COPYFF fEsclusa COAtt
+          HASNAT GA_Open ; No est  abierto...
           MES 24
           MESSAGE 22
           DONE       
@@ -1260,14 +1268,19 @@ salir _   AT lesclusa
 ; Salir con ‚xito...
 salir _   AT lesclusa
           SETCO oEsclusa
-          HASAT GA_Open
+          COPYFF fEsclusa COAtt
+          HASAT GA_Open  ; Open=1
           WORN oTraje
           GOTO lexterior
           DESC [flocalidad]
           DONE          
 
+E _     AT lesclusa 
+        SYNONYM IR nodo
+
 IR nodo AT lesclusa
         WORN oTraje
+        CARRIED oTraje
         MESSAGE 20
         DONE 
 
@@ -1288,18 +1301,23 @@ CERRAR esclusa AT lesclusa
                 MESSAGE 25
                 DONE 
 
-EX compuerta AT lesclusa
+EX esclusa   AT lesclusa
              MES 21 
              SETCO oEsclusa 
+             COPYFF fEsclusa COAtt
 
-EX compuerta AT lesclusa 
+EX esclusa   AT lesclusa 
              HASAT GA_Open
              MESSAGE 23
              DONE 
 
-EX compuerta AT lesclusa
+EX esclusa   AT lesclusa
              HASNAT GA_Open
              MESSAGE 22
+             DONE 
+
+ex controles AT lesclusa 
+             MESSAGE 24
              DONE 
 
 ex boton     AT lesclusa
@@ -1320,6 +1338,7 @@ EX boton Adject1 rojo
 pulsa boton   ADJECT1 rojo
               AT lesclusa 
               SETCO oEsclusa
+              COPYFF fEsclusa COAtt
               HASNAT GA_Open 
               MESSAGE 32
               DONE
@@ -1328,15 +1347,19 @@ pulsa boton   ADJECT1 rojo
 pulsa boton   ADJECT1 rojo
               AT lesclusa 
               SETCO oEsclusa
+              COPYFF fEsclusa COAtt 
               HASAT GA_Open 
-              PLUS  COAtt GO_Open ; Set to OPEN=1
+              MINUS  COAtt GO_Open ; Set to OPEN=0
+              COPYFF COAtt fEsclusa
               MESSAGE 30
               DONE
+
 ; Abrir esclusa...
 ; Pero ya est  abierta...
 pulsa boton ADJECT1 verde 
             AT lesclusa 
             SETCO oEsclusa 
+            COPYFF fEsclusa COAtt
             HASAT GA_Open 
             MESSAGE 28
             DONE 
@@ -1344,20 +1367,20 @@ pulsa boton ADJECT1 verde
 ; Pero no tienes puesto el traje...
 pulsa boton ADJECT1 verde 
             AT lesclusa 
-            SETCO oEsclusa 
-            HASNAT GA_Open 
-            NOTWORN oTraje
+            NOTWORN oTraje            
             MESSAGE 19
             DONE 
 
 ; Abre la esclusa...
 pulsa boton ADJECT1 verde 
             AT lesclusa 
-            SETCO oEsclusa 
-            HASNAT GA_Open 
+            SETCO oEsclusa             
+            COPYFF fEsclusa COAtt 
+            HASNAT GA_Open ; Open=0 
             WORN oTraje
             MESSAGE 29
-            MINUS  COAtt GO_Open ; set to Open=0
+            PLUS  COAtt GO_Open ; set to Open=1           
+            COPYFF COAtt fEsclusa
             DONE 
 
 ; Bodega de la nave
@@ -1383,7 +1406,6 @@ empuja paquetes AT lbodega
 
 entrar _ AT lexterior
          SYNONYM ir nave 
-
 
 ir almacen AT lexterior 
            SYNONYM IR entrada
@@ -1443,7 +1465,7 @@ ex camara PRESENT oCanon
          MESSAGE 41
          DONE  
           
-; Puzzle de la compuerta...
+; Puzzle de la puerta del almac‚n...
 
 ; Zona A1
 ;salir 
@@ -1576,6 +1598,9 @@ _       _       RESET                   ; Objetos a su loc. inicial / Flag 1
                 LET     Prompt   2  ; Deshabilita el prompt random
                 LET     OFlags   64 ; Listado de objetos en l¡nea, en lugar de columna
                 GOTO    1               ; Primera localidad del juego
+; Inicializa objetos
+_       _       SETCO oEsclusa             
+                COPYFF COAtt fEsclusa
 
 /PRO 7 ; Conversaciones con el ordenador de la nave...
 encender consola    MES 105

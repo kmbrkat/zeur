@@ -338,6 +338,8 @@ exterior    182 noun
 fuera       182 noun
 afuera      182 noun
 controles   183 noun
+etiqueta 184 noun
+indicador 184 noun
 ;                       Verbs
 COGER   20      verb
 COGE    20      verb
@@ -406,6 +408,8 @@ lamer    48     verb
 cantar   49     verb
 paper    50     verb
 ink      51     verb
+test     52     verb
+t        52     verb 
 ;   Adjetives
 PEQUE   2       adjective
 GRANDE  3       adjective
@@ -631,7 +635,7 @@ La v¡a l ctea en nuestro caso.
 /8
 La consola de mandos de la nave. Es un modelo bastante nuevo, el ordenador de abordo se encarga de la navegaci¢n y todos los comandos se realizan por voz. En este momento la pantalla de la consola est  en negro.
 /9 
--Funcionamos en modo de bajo consumo. La consola debe permanecer apagada- responde el ordenador.
+-Funcionamos en modo de bajo consumo. La consola debe permanecer apagada -responde el ordenador.
 /10
 Proviene de la consola de mandos. La consola est  en modo de bajo consumo. 
 /11
@@ -643,7 +647,7 @@ Se forman en los gradientes t‚rmicos del parabrisas de la nave.
 /14 
 La nave de reparto donde recorres la galaxia. 
 /15
--Controla la temperatura en el interior y en los instrumentos para evitar su deterioro. -informa el ordenador.
+-Controla la temperatura en el interior y en los instrumentos para evitar su deterioro -informa el ordenador.
 /16
 Es uno de los dos trajes de supervivencia necesario para realizar EVA. El traje es completamente autom tico y tiene una autonom¡a de ocho horas. 
 /17
@@ -651,9 +655,9 @@ Paquetes a entregar en la Tierra.
 /18
 Est  apagada.
 /19
--No es recomendable salir sin el traje protector -aconseja el ordenador.
+-No sobrevivir‚ en Europa sin el traje protector.
 /20
--Debido a la contaminazi¢n deja el traje antes de pasar al nodo central. -te recuerda el ordenador.
+-Debido a la contaminaci¢n deja el traje antes de pasar al nodo central -te recuerda el ordenador.
 /21
 La compuerta de la esclusa sirve para igualar la presi¢n entre el exterior y el interior de la nave. 
 /22
@@ -661,9 +665,9 @@ Est  cerrada.
 /23
 Est  abierta.
 /24 
--La compuerta se abre con los controles manuales de la esclusa.-informa el ordenador.
+-La compuerta se abre con los controles manuales de la esclusa -informa el ordenador. 
 /25
--La compuerta se cierra con los controles manuales de la esclusa. -informa el ordenador.
+-La compuerta se cierra con los controles manuales de la esclusa -informa el ordenador. 
 /26
 Pulsar para abrir la esclusa. ADVERTENCIA: USAR EL TRAJE DE SUPERVIVENCIA EN ENTORNOS HOSTILES."
 /27
@@ -671,7 +675,7 @@ Pulsar para cerrar la esclusa.
 /28
 -La esclusa ya est  abierta.
 /29
--Abriendo compuerta exterior y aislando el interior. -dice el ordenador. 
+-Abriendo compuerta exterior y aislando el interior -dice el ordenador. 
 \k
 
 La compuerta exterior se abre con un siseo mientras se igualan las presiones.
@@ -682,7 +686,7 @@ Una vez la compuerta exterior se ha cerrado, unos chorros de aire a presi¢n surg
 /31
 Un panel se abre y permite el acceso al interior de la nave.
 /32
--La esclusa ya est  cerrada. -reporta el computador de abordo.
+-La esclusa ya est  cerrada -reporta el computador de abordo.
 /33
 Apenas unos mil¡metros de pl stico y metal te separan del exterior.
 /34
@@ -714,12 +718,12 @@ Un paquete azul con un gran indicador de peligro biol¢gico en el frontal.
 /47 
 -Este es el paquete -susurra el ordenador en tu o¡do.
 /48
--No puedo, las directivas de la empresa me lo impiden. -murmuras. 
+-No puedo, las directivas de la empresa me lo impiden. 
 /49
 Peligro biol¢gico. Conservar a menos de 100 celsius bajo cero. No manipular sin protecci¢n. No abrir. No golpear. Material fr gil. 
 ; Textos relativos al ordenador...
 /50 ; Ex ordenador
--Coordino todos los sistemas de la nave. Para hablar conmigo emplea: ordenador palabra clave. Algunas sugerencias de palabras clave son: ordenador ayuda, ordenador nombre, ordenador misi¢n...- te responde servicial el ordenador de navegaci¢n.
+-Coordino todos los sistemas de la nave. Para hablar conmigo emplea: ordenador palabra clave. Algunas sugerencias de palabras clave son: ordenador ayuda, ordenador nombre, ordenador misi¢n... -te responde servicial el ordenador de navegaci¢n.
 /51 ; mensaje
 -Oh, vaya como no pens‚ en leer eso -dice el computador con falsa admiraci¢n.
 /52
@@ -743,7 +747,7 @@ El aullido del viento se infiltra por el fuselaje.
 /64
 ; ================================================================
 /65 ; Hola
--Hola, soy el ordenador de navegaci¢n. -responde una voz met lica.
+-Hola, soy el ordenador de navegaci¢n -responde una voz met lica.
 /66 ; Adios
 -Hasta pronto.
 /67 ; trabajo
@@ -753,7 +757,7 @@ El aullido del viento se infiltra por el fuselaje.
 /69 ; tormenta
 -La tormenta es moderada. No deber¡a ser un problema para acceder al almac‚n usando el traje de protecci¢n.
 /70 ; europa, luna, satelite, 
--Estamos en el sat‚lite Joviano. -responde el ordenador.
+-Estamos en el sat‚lite Joviano -responde el ordenador.
 /71 ; joviano, jupiter
 -Europa es un sat‚lite de Jupiter. En la cara iluminada por J£piter el espect culo es soberbio. Por desgracia nuestro encargo es en la cara oculta. 
 /72 ; cara, lado
@@ -801,7 +805,7 @@ El aullido del viento se infiltra por el fuselaje.
 /93 ; "jugar aventura"
 -Te buscar‚ una realmente interesante como 'Transilvania Corruption', una vez termines la misi¢n.
 /94 ; "cancion/oir/canta/tararea"
--Daisy... -Comienza a entonar sin demasiada fortuna.
+-Daisy... -comienza a entonar sin demasiada fortuna.
 navegaci¢n de la Mega corporation
 /95 ;"interfa"	
 -Lo que usas para hablar conmigo.
@@ -820,7 +824,7 @@ navegaci¢n de la Mega corporation
 /102 ; "almacen"
 -Hemos aterrizado cerca de la entrada. Debes salir al exterior, entrar en el almac‚n y volver con el paquete para que puedas terminar la misi¢n. 
 /103 ; "temperatura"	
--En torno a 150 celsius bajo cero en el exterior. Te recomiendo que lleves el traje de superviviencia.
+-En torno a 150 celsius bajo cero en el exterior. Te recomiendo llevar el traje de superviviencia.
 /104 ; "consola"	
 -La consola de mando muestra el estado de la nave y los controles manuales. Actualmente est  desactivada para ahorrar energ¡a. 
 /105 ; "activar consola"
@@ -834,7 +838,7 @@ navegaci¢n de la Mega corporation
 /109 ; "marte"
 -Ya sabes, el planeta rojo. Bueno, anaranjado desde que dio comienzo la terraformaci¢n.
 /110 ; "venus/saturno/pluton/lunas/urano/neptuno/mercurio"
--Es mejor que no salirse del tema de la misi¢n. -responde
+-Es mejor que no salirse del tema de la misi¢n -responde
 /111 ; "terraformacion"	
 -Hace unos a¤os comenzaron la extracci¢n de minerales, abrieron varias minas y comenzaron los trabajos de terraformaci¢n.
 /112 ; "minas"	
@@ -886,15 +890,15 @@ Tema: Env¡o urgente al Tenedor de Marte. Contenido: Recogida en almac‚n en coord
 /135 ;"traje/superviviencia/proteccion"	
 -Lo encontrar s en la esclusa listo para su uso. Recuerda no salir de la nave sin llevarlo puesto.
 /136 ;"mierda/tacos/culo/joder/hija/puta/puton/hijo/comemierda"	
--Esa acepci¢n no forma parte de mi base de datos. -responde el ordenador con elegancia. 
+-Esa acepci¢n no forma parte de mi base de datos -responde el ordenador con elegancia. 
 /137 ;"siglas"
 -Ya sabes, para acortar frases demasiado largas. 
 /138 ;"calla"	
--Sin problemas, ya no tarareo mas. -responde un poco dolido.
+-Sin problemas, ya no tarareo mas -responde un poco dolido.
 /139 ;"bodega"	
 -Donde almacenamos los paquetes para su distribuci¢n.
 /140 ;"temperatura/frigo/congelador/frigorifico/enfriar"
--Tenemos un frigor¡fico dedicado a este tipo de paquetes. -responde despu‚s de un breve silencio
+-Tenemos un frigor¡fico dedicado a este tipo de paquetes -responde despu‚s de un breve silencio
 /141 ; Hierro/Niquel
 -Es un metal abundante pero muy preciado. Lo dif¡cil es su transporte, pues es muy denso y cuesta bastante dinero extraerlo de la atm¢sfera en la Tierra. 
 /142
@@ -928,16 +932,16 @@ Tema: Env¡o urgente al Tenedor de Marte. Contenido: Recogida en almac‚n en coord
 ; ================================================================
 /170
 -Buen trabajo -aprueba la voz satisfecha del ordenador.  \k 
--Ahora es momento de poner rumbo a Marte. Baja a la bodega de carga mientras reinicio los sistemas de la nave. -dice el ordenador con voz imperante.
+-Ahora es momento de poner rumbo a Marte. Baja a la bodega de carga mientras reinicio los sistemas de la nave -dice el ordenador con voz imperante.
 
 /171
-Desciendes los escalones a la bodega y depositas el paquete junto a los dem s pendientes de entrega. Al regresar descubres que la compuerta se ha cerrado.
+Desciendo los escalones a la bodega y deposito el paquete junto a los dem s pendientes de entrega. Al regresar descubro que la sala se ha cerrado.
 \k
 -No es nada personal pero es momento de reciclar -dice la voz del ordenador- mientras un gas inunda la bodega y caes en un profundo sue¤o. 
 \k
 Lo m s duro es tener que reciclar sus piezas para la siguiente misi¢n. Llegan a creerse humanos. En fin... -suspira el ordenador mientras recoge los restos de tu cuerpo con una robofregona.
 \k
--Central, aqu¡ Tod Connor. -dice la voz- Volvemos a Marte con el paquete. Repito volvemos con el paquete. 
+-Central, aqu¡ Tod Connor -dice la voz- Volvemos a Marte con el paquete. Repito volvemos con el paquete. 
 /172 
 Hay dos botones: rojo y verde. Se utilizan para cerrar y abrir la esclusa al exterior. 
 /173  
@@ -950,6 +954,40 @@ No es momento de jugar al Sokoban.
 -Cantare, ooh oooh -intentas entonar
 
 -Nel blu dipinto di blu...
+/177
+S¢lo escucho est tica. La tormenta interfiere en las comunicaciones.
+/178
+Estoy en la cara oculta, no veo J£piter.
+/179
+Sat‚lite helado e inh¢spito. 
+/180
+La entrada al almac‚n. 
+/181
+Funciona con comandos de voz al ordenador: ordenador palabra_clave. 
+/182 
+Es un bloque met lico rectangular que se interna bajo tierra. 
+/183
+(en el teclado)
+/184
+La puerta del almac‚n ya est  abierta.
+/185 
+El teclado se ilumina en rojo. CODIGO INCORRECTO. 
+/186
+El teclado se ilumina en verde. CODIGO CORRECTO. El ca¤¢n l ser se repliega en su compartimento. 
+/187
+El ca¤¢n l ser comienza a calentarse.
+/188
+El ca¤¢n l ser se prepara a disparar. 
+/189
+El ca¤¢n l ser dispara. \k 
+
+Pero nada sucede. Una voluta de humo y algunas chispas surgen del ca¤¢n.
+/190
+Son contenedores de transporte. 
+/191
+(cogiendo antes el traje)
+/192
+-Entonces te quedar¡as a solas en este lugar inh¢spito -te recuerda el ordenador.
 ;       -       -       -       -       -       -       -       -       -
 /OTX    ;Object Texts
 /0
@@ -959,13 +997,17 @@ un traje presurizado
 /2
 la compuerta de la esclusa
 /3
-La entrada al almac‚n
+una puerta de metal
 /4 
 un bot¢n rojo
 /5
 un bot¢n verde
 /6
 un ca¤¢n de vigilancia
+/7
+un teclado
+
+
 ;       -       -       -       -       -       -       -       -       -
 /LTX    ;Location Texts
 /0
@@ -1047,6 +1089,7 @@ E 7
 /4   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton ROJO
 /5   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton VERDE
 /6   NOTCREATED 10      _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    canon _
+/7   NOTCREATED 10     _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    teclado _
 ;------------------------------------------------------------------------------
 /PRO 0       ;Main Location Loop
 
@@ -1069,9 +1112,13 @@ _       _       PROCESS 1 ; Bucle que procesa el input del jugador en la localid
 
 _       _       PROCESS 4               ; Lo que en el PAW era el proceso 2, se ejecuta antes de procesar el input del jugador cada turno
 
-_       _       PARSE   0               ; Toma sentencia l¢gica del buffer
+_       _       EQ fTesting 0
+                PARSE   0               ; Toma sentencia l¢gica del buffer
                 PROCESS 2               ; Sentencia no v lida o timeout
                 REDO                    ; Vuelve al comienzo del proceso 
+
+_       _       EQ fTesting 1
+                PROCESS 8 
 
 _       _       EQ      Turns   255     ; El valo m ximo de un byte
                 PLUS    Turns+1 1
@@ -1124,7 +1171,15 @@ _       _       NEWLINE
 ; ============ LIBRER?A BASE INICIAL =======================================
 #include C:\zeur\lbinicio.sce
 ; ================== C¢DIGO DE LA AVENTURA =================================
-; Objetos
+
+TEST _ EQ fTesting 1 
+       LET fTesting 0
+
+TEST _ EQ fTesting 0
+       LET fTesting 1
+
+;PROCESS 8 ; Proceso de inyecci¢n de comandos...
+
 ; --------------------------------------------------------------------
 ; S¢lo podemos hablar con el ordenador en la nave
 ; ORDENADOR, palabra_clave
@@ -1147,9 +1202,28 @@ _   ordenador  COPYFF Noun2 Noun1
 ordenador  ordenador COPYFF Noun2 Noun1
                 LET Noun2 NULL
                 PROCESS 7
+                DONE
+; Objetos
+EX contenedor ADJECT1 azul
+                PRESENT oCaja
+                MES 46
                 DONE 
+
+EX indicador PRESENT oCaja
+                MES 49
+                DONE 
+
+ponerse traje PRESENT oTraje 
+                NOTCARR oTraje 
+                MESSAGE 191
+                AUTOG
+
 ; --------------------------------------------------------------------
 ; Descripciones com£nes para la nave
+
+ABRIR paquete   MES 48 
+                DONE
+
 EX nave         ATLT  lexterior
                 MES   14
                 DONE
@@ -1178,6 +1252,10 @@ cantar  _       MES 176
 
 ; Descripciones en funci¢n de la localidad...
 ; Puente de mando
+teclear _       AT lpuente 
+                MES 181
+                DONE 
+
 EX sistema      Adject1 termico 
                 MES 15
                 DONE 
@@ -1238,9 +1316,12 @@ IR bodega   AT lnodo
 
 _   _   AT lnodo
         CARRIED oCaja
-        MES 170
+        ZERO fcasifin 
+        MESSAGE 170
+        LET fCasifin 1
         ANYKEY 
         DONE 
+
 ; Esclusa
 ; Puzzle de la esclusa y ponerse el traje...
 _ afuera SYNONYM salir _
@@ -1249,6 +1330,13 @@ IR Exterior SYNONYM SALIR _
 
 o _       AT lesclusa 
           SYNONYM salir _
+
+quitar traje WORN oTraje
+             SETCO oEsclusa 
+             COPYFF fEsclusa COAtt
+             HASAT GA_Open ; Est  abierto...
+             MES 19
+             DONE
 
 ; Salir, compuerta cerrada...
 salir _   AT lesclusa
@@ -1280,6 +1368,10 @@ E _     AT lesclusa
 
 IR nodo AT lesclusa
         WORN oTraje
+        MESSAGE 20
+        DONE 
+
+IR nodo AT lesclusa
         CARRIED oTraje
         MESSAGE 20
         DONE 
@@ -1387,7 +1479,7 @@ pulsa boton ADJECT1 verde
 ; Aqu¡ se termina el juego... 
 _   _   AT lbodega
         CARRIED oCaja
-        MES 171
+        MESSAGE 171
         ANYKEY 
         END
 
@@ -1406,6 +1498,8 @@ empuja paquetes AT lbodega
 
 entrar _ AT lexterior
          SYNONYM ir nave 
+este _     AT lexterior
+        SYNONYM ir nave 
 
 ir almacen AT lexterior 
            SYNONYM IR entrada
@@ -1424,11 +1518,20 @@ ir nave AT lexterior
         DESC [flocation] 
         DONE
 
-;ex cielo
+ex cielo ATGT lzonaA1
+         ATLT lalmacen 
+         MES 7
+         DONE 
 
-;ex tormenta 
+ex jupiter ATGT lzonaA1
+           ATLT lalmacen 
+           MES 178
+           DONE
 
-;ex jupiter 
+ex europa ATGT lzonaA1
+         ATLT lalmacen 
+         MES 179
+         DONE 
 
 ex nave AT lexterior 
         MESSAGE 36
@@ -1438,52 +1541,146 @@ ex mole AT lexterior
         MESSAGE 38
         DONE 
 
-; Entrada
+; Entrada al almac‚n
+este _  AT lalmacen 
+        SYNONYM ir nave
+
 ir nave AT lalmacen 
         GOTO lexterior 
         DESC [flocation]
         DONE 
 
-;entrar 
+O _     AT lentrada 
+        SYNONYM entrar _
 
-;ex puerta 
+entrar _        AT lentrada 
+       SETCO oPuerta 
+       COPYFF fPuerta COAtt 
+       HASAT GA_Open ; Open=1
+       GOTO lzonaA1
+       DESC [flocation]
+       DONE 
 
-;ex compuerta 
+entrar _        AT lentrada
+       SETCO oPuerta 
+       COPYFF fPuerta COAtt 
+       HASNAT GA_Open ; Open=0
+       MES 22
+       DONE 
 
-;ex teclado 
+ex edificio AT lentrada
+         MES 182
+         DONE 
+
+ex puerta AT lentrada
+          MES 39
+          PLACE oTeclado  lentrada
+          DONE 
+          ; Movemos el teclado...
+
+ex canon AT lentrada
+         PRESENT oCanon
+         MES 41
+         DONE 
+
+ex teclado AT lentrada
+           PRESENT oTeclado
+           ABSENT oCanon 
+           PLACE oCanon lentrada
+           MES 40
+           DONE 
+
 ; En C64 usamos 38911
-escribir 32768 AT lalmacen 
+teclear _ AT lentrada 
+          SYNONYM escribir _ 
+
+escribir _ EQ Noun2 NULL 
+           COPYFF Noun1 Noun2
+           LET Noun1 vteclado 
+           MESSAGE 183
+
+escribir 32768 AT lentrada 
                Noun2 teclado 
+               PRESENT oTeclado 
+                SETCO oPuerta 
+                COPYFF fPuerta COAtt 
+                HASAT GA_Open ; Open=1
+                MES 184                
+                DONE 
 
-escribir _ AT lalmacen 
-           EQ Noun2 NULL 
+escribir 32768 AT lentrada 
+               Noun2 teclado 
+               PRESENT oTeclado 
+                SETCO oPuerta 
+                COPYFF fPuerta COAtt 
+                HASNAT GA_Open ; Open=0
+                MES 186
+                PLUS  COAtt GO_Open ; set to Open=1           
+                COPYFF COAtt fPuerta
+                DONE 
+                
+escribir _ AT lentrada
+           Noun2 teclado 
+           PRESENT oTeclado
+           PLUS fCanon 1
+           MES 185
 
-ex canon AT lalmacen 
+escribir _ AT lentrada
+           Noun2 teclado
+           PRESENT oTeclado
+           GT fCanon 0
+           LT fCanon 4
+           LET fTemp 186
+           ADD fCanon fTemp
+           MESSAGE [fTemp]
+           DONE 
+
+escribir _ AT lentrada
+           Noun2 teclado
+           PRESENT oTeclado
+           DONE
+
+ex canon AT lentrada
          SYNONYM ex camara 
          
 ex camara PRESENT oCanon
          MESSAGE 41
          DONE  
           
-; Puzzle de la puerta del almac‚n...
-
 ; Zona A1
 ;salir 
 ;ir exterior 
-;ir a2
-;ex estanterias 
-;ex contenedores 
-;ex techo
-;ex suelo
-;ex paredes 
-;ex pasillo 
+;ir a2 AT lzonaA1 SYNONYM OESTE _
 
+ex estanterias  AT lzonaA1
+        MES 43
+        DONE 
+
+ex techo SYNONYM ex pasillo
+ex suelo SYNONYM ex pasillo
+ex paredes SYNONYM ex pasillo
+ex pasillo AT lzonaA1
+           MESSAGE 44
+           DONE 
+
+EX contenedores AT lzonaA1
+        MES 190
+        DONE 
 ; Zona A2
-;ex boveda 
-;ex pasillo
-;ir a1 
-;ex estanterias 
-;ex contenedores 
+ex boveda AT lzonaA2
+          MES 45
+          DONE 
+ex pasillo AT lzonaA2
+           MESSAGE 44
+           DONE 
+
+EX estanterias AT lzonaA2
+        MES 44
+        DONE 
+
+EX contenedores AT lzonaA2
+        MES 190
+        DONE 
 
 ; ================= LIBRER¡A BASE FINAL ===========================================
 #include C:\zeur\lbfinal.sce
@@ -1603,6 +1800,15 @@ _       _       SETCO oEsclusa
                 COPYFF COAtt fEsclusa
 
 /PRO 7 ; Conversaciones con el ordenador de la nave...
+_ _     INK cVERDE 
+
+_ _     ATGT lalmacen
+        MES 177
+        DONE
+
+apagar _ MES 192 
+         DONE 
+
 encender consola    MES 105
                 DONE
 
@@ -1615,7 +1821,158 @@ _  _            COPYFF  Noun1 fmensaje
                 GT      fmensaje  64
                 LT      fmensaje 142
                 MES     [fmensaje]
+                INK     cBLANCO
                 DONE
 
 _   _       MES 50
                 DONE 
+
+_ _     INK cBLANCO
+; Test 
+/PRO 8
+
+_ _ PRINT fTestStep
+        SYSMESS 46
+
+_ _ EQ fTestStep 0
+    LET Verb vEX 
+    LET Noun1 vconsola
+
+_ _ EQ fTestStep 1
+    LET Verb vS
+
+_ _ EQ fTestStep 2
+    LET Verb vS
+
+_ _ EQ fTestStep 3
+    LET Verb vEX
+    LET Noun1 vpaquete
+
+_ _ EQ fTestStep 4 
+    LET Verb vN
+
+_ _ EQ fTestStep 5
+    LET Verb vO
+
+_ _ EQ fTestStep 6
+    LET Verb vO
+
+_ _ EQ fTestStep 7
+    LET Verb vPONER
+    LET Noun1 vtraje 
+
+_ _ EQ fTestStep 8 
+        LET Verb vpulsar
+        LET Noun1 vboton 
+        LET Adject1 vROJO
+
+_ _ EQ fTestStep 9 
+        LET Verb vO
+
+_ _ EQ fTestStep 10 
+        LET Verb vpulsar
+        LET Noun1 vboton
+        LET Adject1 vVERDE
+_ _ EQ fTestStep 11 
+        LET Verb vO
+_ _ EQ fTestStep 12 
+        LET Verb vO
+_ _ EQ fTestStep 13  
+        LET Verb vO
+_ _ EQ fTestStep 14
+        LET Verb vO
+_ _ EQ fTestStep 15
+        LET Verb vEX
+        LET Noun1 vpuerta
+_ _ EQ fTestStep 16 
+        LET Verb vabrir
+        LET Noun1 vpuerta
+_ _ EQ fTestStep 17
+        LET Verb vCOGER
+        LET Noun1 vpuerta
+_ _ EQ fTestStep 18
+        LET Verb vEX
+        LET Noun1 vteclado
+_ _ EQ fTestStep 19
+        LET Verb vTOCAR
+        LET Noun1 vteclado
+_ _ EQ fTestStep 20
+        LET Verb vEX
+        LET Noun1 vcanon
+
+_ _ EQ fTestStep 21
+        LET Verb vteclear
+        LET Noun1 vteclado
+
+_ _ EQ fTestStep 22
+        LET Verb vteclear
+        LET Noun1 vteclado
+
+_ _ EQ fTestStep 23
+        LET Verb vteclear
+        LET Noun1 vteclado
+
+_ _ EQ fTestStep 24
+        LET Verb vteclear
+        LET Noun1 v32768
+
+_ _ EQ fTestStep 25
+        LET Verb vEX
+        LET Noun1 vcanon
+
+_ _ EQ fTestStep 26
+        LET Verb vO
+
+_ _ EQ fTestStep 27
+        LET Verb vEX
+        LET Verb vpaquete
+
+_ _ EQ fTestStep 27
+        LET Verb vO
+
+_ _ EQ fTestStep 28
+        LET Verb vCOGER
+        LET Noun1 vpaquete
+_ _ EQ fTestStep 29
+        LET Verb vCOGER
+        LET Noun1 vpaquete
+        LET Adject1 vAZUL 
+
+_ _ EQ fTestStep 30
+        LET Verb vEX
+        LET Noun1 vpaquete
+
+_ _ EQ fTestStep 31
+        LET Verb vEX
+        LET Noun1 vpaquete
+_ _ EQ fTestStep 32
+        LET Verb vCOGER
+        LET Noun1 vpaquete        
+_ _ EQ fTestStep 33
+        LET Verb vE
+_ _ EQ fTestStep 34
+        LET Verb vE
+_ _ EQ fTestStep 35
+        LET Verb vE
+_ _ EQ fTestStep 36
+        LET Verb vE
+_ _ EQ fTestStep 37 
+        LET Verb vpulsa
+        LET Noun1 vboton
+        LET Adject1 vROJO
+_ _ EQ fTestStep 38
+        LET Verb vQUITAR
+        LET Noun1 vtraje
+_ _ EQ fTestStep 39
+        LET Verb vDEJAR
+        LET Noun1 vtraje
+
+_ _ EQ fTestStep 40
+        LET Verb vE
+_ _ EQ fTestStep 41
+        LET Verb vS
+
+_ _ EQ fTestStep 42
+    LET fTesting 0
+
+_ _ PLUS fTestStep 1

@@ -1,24 +1,31 @@
 ZEUR 
 ====================
 TODO: 
-
-	- Teclado numérico funciona
-	- Fin de juego al recuperar el paquete
-	- Si la compuerta se abre no podemos volver al interior de la nave 
-
 	- Listar el inventario en fila añadiendo (puesto), (encendido),etc	
-	- Completar todas las descripciones 
-	- Poner el traje si está presente lo coje primero
+	- Completar todas las descripciones 	
 	- En el listado de objetos no se muestran aquellos como Concealed
 	- Menú de ayuda 
 	- Cambir la fuente típica del DAAD 
-	- Añadir colores para las conversaciones con el ordenador...
+	
+03.03.2019
+	> Teclado numérico funciona
+	> Si la compuerta se abre no podemos volver al interior de la nave 
+	> Poner el traje si está presente lo coje primero
+	> Añadido testeo automático, se acabó teclear los comandos :-) 
+	> Añadir colores para las conversaciones con el ordenador...
+	> Fin de juego al recuperar el paquete
+	
+02.03.2019 
+ Muchísimo trabajo y apenas puedo dormir, veamos si puedo avanzar un poco.
+ + En el exterior y dentro la esclus una vez despresurizada nos podemos
+ quitar el traje.
+ + El ordenador sigue hablando aunque no estemos en la nave...
 
 26.02.2019
 > El sistema de atributos básicamente HAT/HASN funciona
 como un comprobado bit a bit DESCENDENTE empezando por el bit 0 del FLAG 59 
 y desciende hasta llegar a 255. Es decir que realmente se pueden comprobar
-bit a bit sólo los 32 flags 
+bit a bit sólo 32 flags 
 
 Flag 59 bit 0 -> Atributo 0 -> Current Object 
 Flag 58 bit 0 -> Atributo 8 -> Current Object 
@@ -35,7 +42,6 @@ el HAS HASN
 	+ La comprobacion de la apertura de la compuerta no funciona
 	+ No se puede ir al interior de la nave con el traje puesto. Hay que quitárselo
 	y dejarlo siempre en la esclusa. 
-
 
 25.02.2019 
 > Más descripciones, vocabulario y movimientos entre localidades

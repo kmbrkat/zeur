@@ -359,8 +359,8 @@ SAVE    26      verb
 LOAD    27      verb
 RAMSA   28      verb
 RAMLO   29      verb
-M       36      verb
-MIRAR   36      verb ; Desacopla mirar de examinar...
+M       53      verb
+MIRAR   53      verb ; Desacopla mirar de examinar...
 X       30      verb
 EX      30      verb
 EXAMI   30      verb
@@ -619,7 +619,7 @@ ZHL
 
 Entregamos su paquete en 24h.  
 
-(c) 2016, 2019 KMBR. Release 2.
+(c) 2016, 2019 KMBR. Release 3.
 /2 
 No veo nada de particular.
 /3
@@ -702,7 +702,7 @@ Con dificultad distingues el perfil de un edificio de metal recortado contra el 
 /39
 En un lateral de la entrada un teclado num‚rico ilumina levemente la oscuridad.
 /40
-Por una abertura se desliza un ca¤¢n l ser que te apunta: TECLEE EL C?DIGO DE ACCESO. TIENE UNA OPORTUNIDAD ANTES DE SER DESINTEGRADO.
+Por una abertura se desliza un ca¤¢n l ser que te apunta: TECLEE EL C¢DIGO DE ACCESO. TIENE UNA OPORTUNIDAD ANTES DE SER DESINTEGRADO.
 /41
 Un ca¤¢n de aspecto peligroso sigue tus movimientos.
 /42
@@ -1013,8 +1013,6 @@ un bot¢n verde
 un ca¤¢n de vigilancia
 /7
 un teclado
-
-
 ;       -       -       -       -       -       -       -       -       -
 /LTX    ;Location Texts
 /0
@@ -1096,7 +1094,7 @@ E 7
 /4   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton ROJO
 /5   lesclusa  10       _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ Y    boton VERDE
 /6   NOTCREATED 10      _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    canon _
-/7   NOTCREATED 10     _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _    teclado _
+/7   NOTCREATED 10     _ _  _ _ _ _ _ _ _ _ _ _ _ _ Y _ _ _     teclado _
 ;------------------------------------------------------------------------------
 /PRO 0       ;Main Location Loop
 
@@ -1205,6 +1203,9 @@ _       _       NEWLINE
          PRINT Adject1
          SPACE
 #endif
+;INK _ INK [Adject1]
+;       DONE
+
 ; ordenador encender consola -> encender ordenador consola -> encender consola
 _   ordenador  COPYFF Noun2 Noun1
                LET Noun2 NULL 
@@ -1641,7 +1642,7 @@ escribir _ AT lentrada
            LET Noun2 vteclado 
            MESSAGE 183
 
-escribir 32768 AT lentrada 
+escribir _     AT lentrada 
                Noun2 teclado 
                PRESENT oTeclado 
                 SETCO oPuerta 
@@ -1659,6 +1660,7 @@ escribir 32768 AT lentrada
                 MES 186
                 PLUS  COAtt GO_Open ; set to Open=1           
                 COPYFF COAtt fPuerta
+                PLACE oCanon NOTCREATED
                 DONE 
                 
 escribir _ AT lentrada

@@ -3,8 +3,7 @@ ZHL
 TODO: 	
 	- Mensaje de: No llevo nada en lugar del que se muestra por defecto.
 	- Listar el inventario en fila añadiendo (puesto), (encendido),etc	
-	- En el listado de objetos no se muestran aquellos como Concealed
-	- Montar fichero TAP para Spectrum
+	- En el listado de objetos no se muestran aquellos como Concealed	
 	- Colores en la fuente cuando habla el ordenador 
 	- Pantalla de carga...
 	- Cambir la fuente típica del DAAD 
@@ -27,7 +26,8 @@ TODO:
 	en el almacén
 	+coger contenedor
 	> ¡Pero el juego se puede terminar! :-)
-	> Versión de Spectrum funcionando sin problemas.
+	> Versión de Spectrum funcionando sin problemas: 9855bytes free, DDBB 19800bytes
+	> Release 3 con algunos fallos tontos corregidos
 
 03.03.2019
 > Teclado numérico funciona

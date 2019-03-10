@@ -75,7 +75,7 @@
 #define cVERDE 4
 #define cCIAN 5
 #define cAMARILLO 6
-#define cBLANCO 7
+#define cBLANCO 1
 #ENDIF
 #IF PC
 #define cNEGRO 0

@@ -253,6 +253,7 @@ viajar  96 noun
 codigo 98  noun
 central 99 noun
 zeur    100 noun
+zhl     100 noun
 tierra  101 noun
 almacen 102 noun
 edificio 102 noun 
@@ -338,8 +339,8 @@ exterior    182 noun
 fuera       182 noun
 afuera      182 noun
 controles   183 noun
-etiqueta 184 noun
-indicador 184 noun
+etiqueta    184 noun
+indicador   184 noun
 ;                       Verbs
 COGER   20      verb
 COGE    20      verb
@@ -614,16 +615,15 @@ Pon en marcha la cinta.
 /0
  E U R O P A 
 /1
-ZEUR
+ZHL
 
 Entregamos su paquete en 24h.  
 
 (c) 2016, 2019 KMBR. Release 2.
-
 /2 
 No veo nada de particular.
 /3
-ZEUR by Alien soft
+ZHL by Alien soft
 /4 
 Descienden al nodo central.
 /5
@@ -659,15 +659,15 @@ Est  apagada.
 /20
 -Debido a la contaminaci¢n deja el traje antes de pasar al nodo central -te recuerda el ordenador.
 /21
-La compuerta de la esclusa sirve para igualar la presi¢n entre el exterior y el interior de la nave. 
+La esclusa sirve para igualar la presi¢n entre el exterior y el interior de la nave. 
 /22
 Est  cerrada.
 /23
 Est  abierta.
 /24 
--La compuerta se abre con los controles manuales de la esclusa -informa el ordenador. 
+-La esclusa se abre con los controles manuales de la esclusa -informa el ordenador. 
 /25
--La compuerta se cierra con los controles manuales de la esclusa -informa el ordenador. 
+-La esclusa se cierra con los controles manuales de la esclusa -informa el ordenador. 
 /26
 Pulsar para abrir la esclusa. ADVERTENCIA: USAR EL TRAJE DE SUPERVIVENCIA EN ENTORNOS HOSTILES."
 /27
@@ -694,9 +694,9 @@ Apenas unos mil¡metros de pl stico y metal te separan del exterior.
 /35
 Total oscuridad salvo por el brillo esquivo de los trozos de hielo que est n cayendo.
 /36
-La nave modular est ndar de ZEUR. Pintada de amarillo y con el logo de la compa¤¡a en grandes letras rojas.
+La nave modular est ndar de ZHL. Pintada de amarillo y con el logo de la compa¤¡a en grandes letras rojas.
 /37
-ZEUR 24h
+ZHL 24h
 /38
 Con dificultad distingues el perfil de un edificio de metal recortado contra el cielo. 
 /39
@@ -816,7 +816,7 @@ navegaci¢n de la Mega corporation
 /98 ; "codigo"	
 -No tengo ning£n dato en la orden de la central acerca del c¢digo.
 /99 ; "central"
--La central de ZEUR est  en la Tierra.
+-La central de ZHL est  en la Tierra.
 /100 ;"ZEUR"	
 -Es la empresa de reparto de paquetes en 24h que nos paga el sueldo y las piezas para seguir recorriendo el Universo.
 /101 ; "Tierra"
@@ -856,11 +856,11 @@ navegaci¢n de la Mega corporation
 /118 ;"ocio"
 -Aqu¡ nada de ocio, hay que terminar el trabajo.
 /119 ;"paqueteria"	
--Nuestro trabajo en ZEUR es entregar los paquetes en 24h.
+-Nuestro trabajo en ZHL es entregar los paquetes en 24h.
 /120 ;"suministros"
 -Se han abierto varias minas en Marte con el objetivo de abaratar el precio de poner algunas materias primas en el espacio.
 /121 ; "paquete"	
--Seg£n la descripci¢n del mensaje se trata de un paquete de 27cm x 29cm x 30cm que pesa 10Kg. 
+-Seg£n la descripci¢n del mensaje se trata de un paquete azul de 27cm x 29cm x 30cm que pesa 10Kg. 
 /122 ; "recoger/recogida"	
 -Hemos aterrizado en la entrada del almac‚n. Sugiero que salgas ah¡ fuera, llames a la puerta y recojas el paquete.
 /123 ; "nave"
@@ -932,15 +932,19 @@ Tema: Env¡o urgente al Tenedor de Marte. Contenido: Recogida en almac‚n en coord
 ; ================================================================
 /170
 -Buen trabajo -aprueba la voz satisfecha del ordenador.  \k 
--Ahora es momento de poner rumbo a Marte. Baja a la bodega de carga mientras reinicio los sistemas de la nave -dice el ordenador con voz imperante.
+
+-Ahora es momento de poner rumbo a Marte. Baja a la bodega de carga mientras reinicio los sistemas de la nave -dice el ordenador premura.
 
 /171
 Desciendo los escalones a la bodega y deposito el paquete junto a los dem s pendientes de entrega. Al regresar descubro que la sala se ha cerrado.
 \k
+
 -No es nada personal pero es momento de reciclar -dice la voz del ordenador- mientras un gas inunda la bodega y caes en un profundo sue¤o. 
 \k
+
 Lo m s duro es tener que reciclar sus piezas para la siguiente misi¢n. Llegan a creerse humanos. En fin... -suspira el ordenador mientras recoge los restos de tu cuerpo con una robofregona.
 \k
+
 -Central, aqu¡ Tod Connor -dice la voz- Volvemos a Marte con el paquete. Repito volvemos con el paquete. 
 /172 
 Hay dos botones: rojo y verde. Se utilizan para cerrar y abrir la esclusa al exterior. 
@@ -963,7 +967,7 @@ Sat‚lite helado e inh¢spito.
 /180
 La entrada al almac‚n. 
 /181
-Funciona con comandos de voz al ordenador: ordenador palabra_clave. 
+Funciona con comandos de voz al ordenador: ordenador clave. 
 /182 
 Es un bloque met lico rectangular que se interna bajo tierra. 
 /183
@@ -988,6 +992,9 @@ Son contenedores de transporte.
 (cogiendo antes el traje)
 /192
 -Entonces te quedar¡as a solas en este lugar inh¢spito -te recuerda el ordenador.
+/193
+-Busco un paquete azul. 
+
 ;       -       -       -       -       -       -       -       -       -
 /OTX    ;Object Texts
 /0
@@ -1116,10 +1123,15 @@ _       _       EQ fTesting 0
                 PARSE   0               ; Toma sentencia l¢gica del buffer
                 PROCESS 2               ; Sentencia no v lida o timeout
                 REDO                    ; Vuelve al comienzo del proceso 
-
-_       _       EQ fTesting 1
+#if DEBUG
+ _       _       EQ fTesting 1
                 PROCESS 8 
 
+ _       _       EQ fTesting 1   ; Si en modo test no hay entrada...
+                EQ Noun1 NULL
+                EQ Verb NULL
+                REDO
+#endif                
 _       _       EQ      Turns   255     ; El valo m ximo de un byte
                 PLUS    Turns+1 1
                 CLEAR   Turns
@@ -1171,27 +1183,28 @@ _       _       NEWLINE
 ; ============ LIBRER?A BASE INICIAL =======================================
 #include C:\zeur\lbinicio.sce
 ; ================== C¢DIGO DE LA AVENTURA =================================
-
-TEST _ EQ fTesting 1 
+#if DEBUG
+ TEST _ EQ fTesting 1 
        LET fTesting 0
 
-TEST _ EQ fTesting 0
+ TEST _ EQ fTesting 0
        LET fTesting 1
-
+#ENDIF
 ;PROCESS 8 ; Proceso de inyecci¢n de comandos...
 
 ; --------------------------------------------------------------------
 ; S¢lo podemos hablar con el ordenador en la nave
 ; ORDENADOR, palabra_clave
-_   _           PRINT Verb
-                SPACE
-                PRINT Noun1
-                SPACE
-                PRINT Noun2
-                SPACE
-                PRINT Adject1
-                SPACE
-
+#if DEBUG
+ _   _   PRINT Verb
+         SPACE
+         PRINT Noun1
+         SPACE
+         PRINT Noun2
+         SPACE
+         PRINT Adject1
+         SPACE
+#endif
 ; ordenador encender consola -> encender ordenador consola -> encender consola
 _   ordenador  COPYFF Noun2 Noun1
                LET Noun2 NULL 
@@ -1215,6 +1228,7 @@ EX indicador PRESENT oCaja
 
 ponerse traje PRESENT oTraje 
                 NOTCARR oTraje 
+                NOTWORN oTraje
                 MESSAGE 191
                 AUTOG
 
@@ -1233,11 +1247,29 @@ EX nave         ATLT lalmacen
 
 EX pared        SYNONYM EX suelo
 
-EX techo        SYNONYM Ex techo         
+EX cielo        SYNONYM Ex techo 
+
+EX techo        ATLT lexterior 
+                MES 33 
+                DONE 
+
+EX techo        ATGT lbodega 
+                ATLT lzonaA1
+                MES 178
+                DONE 
+
+EX techo        AT lzonaA2
+                MES 45
+                DONE
 
 EX suelo        ATLT lexterior
                 MES 33 
                 DONE 
+
+EX suelo        ATGT lbodega 
+                ATLT lzonaA1
+                MES 179
+                DONE         
 
 escuchar _      ATLT lexterior 
                 MES 57
@@ -1277,7 +1309,11 @@ EX escaleras    AT  lpuente
                 MES 4
                 DONE
 
-EX pantalla     SYNONYM EX consola 
+EX pantalla     AT lpuente 
+                SYNONYM EX consola 
+
+EX interior     AT lpuente 
+                SYNONYM EX consola 
 
 EX consola      AT lpuente
                 MES 8
@@ -1293,6 +1329,7 @@ EX luz          AT lpuente
 
 EX tormenta     MES 11
                 DONE
+
 
 ; Nodo Central
 EX escaleras    AT lnodo
@@ -1316,7 +1353,7 @@ IR bodega   AT lnodo
 
 _   _   AT lnodo
         CARRIED oCaja
-        ZERO fcasifin 
+        ZERO fCasifin 
         MESSAGE 170
         LET fCasifin 1
         ANYKEY 
@@ -1518,18 +1555,18 @@ ir nave AT lexterior
         DESC [flocation] 
         DONE
 
-ex cielo ATGT lzonaA1
-         ATLT lalmacen 
+ex cielo ATLT lzonaA1
+         ATGT lbodega 
          MES 7
          DONE 
 
-ex jupiter ATGT lzonaA1
-           ATLT lalmacen 
+ex jupiter ATLT lzonaA1
+           ATGT lbodega 
            MES 178
            DONE
 
-ex europa ATGT lzonaA1
-         ATLT lalmacen 
+ex europa ATLT lzonaA1
+         ATGT lbodega
          MES 179
          DONE 
 
@@ -1539,7 +1576,12 @@ ex nave AT lexterior
 
 ex mole AT lexterior 
         MESSAGE 38
-        DONE 
+        DONE
+
+ex cristales ATLT lzonaA1
+        ATGT lbodega 
+        MES 11
+        DONE
 
 ; Entrada al almac‚n
 este _  AT lalmacen 
@@ -1594,9 +1636,9 @@ ex teclado AT lentrada
 teclear _ AT lentrada 
           SYNONYM escribir _ 
 
-escribir _ EQ Noun2 NULL 
-           COPYFF Noun1 Noun2
-           LET Noun1 vteclado 
+escribir _ AT lentrada
+           EQ Noun2 NULL 
+           LET Noun2 vteclado 
            MESSAGE 183
 
 escribir 32768 AT lentrada 
@@ -1666,6 +1708,30 @@ ex pasillo AT lzonaA1
 EX contenedores AT lzonaA1
         MES 190
         DONE 
+
+EX contenedores AT lzonaA2
+        MES 190
+        DONE 
+coger paquete AT lzonaA1
+        PRESENT oCaja
+        AUTOG
+        DONE 
+
+coger paquete AT lzonaA2
+        PRESENT oCaja
+        AUTOG
+        DONE         
+
+Coger paquete AT lzonaA1
+        EQ Adject1 NULL
+        MES  193
+        done
+
+Coger paquete AT lzonaA2
+        EQ Adject1 NULL
+        MES  193
+        done
+
 ; Zona A2
 ex boveda AT lzonaA2
           MES 45
@@ -1800,9 +1866,9 @@ _       _       SETCO oEsclusa
                 COPYFF COAtt fEsclusa
 
 /PRO 7 ; Conversaciones con el ordenador de la nave...
-_ _     INK cVERDE 
+;_ _     INK cVERDE 
 
-_ _     ATGT lalmacen
+_ _     ATGT lbodega
         MES 177
         DONE
 
@@ -1824,155 +1890,187 @@ _  _            COPYFF  Noun1 fmensaje
                 INK     cBLANCO
                 DONE
 
-_   _       MES 50
-                DONE 
-
 _ _     INK cBLANCO
-; Test 
-/PRO 8
 
-_ _ PRINT fTestStep
+_   _       MES 50
+            DONE 
+
+#if DEBUG
+ ; Test 
+ /PRO 8
+
+ _ _ PRINT fTestStep
         SYSMESS 46
 
-_ _ EQ fTestStep 0
+ _ _ EQ fTestStep 0
     LET Verb vEX 
     LET Noun1 vconsola
 
-_ _ EQ fTestStep 1
+ _ _ EQ fTestStep 1
+    LET Verb vEX 
+    LET Noun1 vinter
+
+ _ _ EQ fTestStep 3
     LET Verb vS
 
-_ _ EQ fTestStep 2
+ _ _ EQ fTestStep 5
     LET Verb vS
 
-_ _ EQ fTestStep 3
+ _ _ EQ fTestStep 7
     LET Verb vEX
     LET Noun1 vpaquete
 
-_ _ EQ fTestStep 4 
+ _ _ EQ fTestStep 8 
     LET Verb vN
 
-_ _ EQ fTestStep 5
+ _ _ EQ fTestStep 10
     LET Verb vO
 
-_ _ EQ fTestStep 6
+ _ _ EQ fTestStep 12
     LET Verb vO
 
-_ _ EQ fTestStep 7
+ _ _ EQ fTestStep 14
     LET Verb vPONER
     LET Noun1 vtraje 
 
-_ _ EQ fTestStep 8 
+ _ _ EQ fTestStep 16 
         LET Verb vpulsar
         LET Noun1 vboton 
         LET Adject1 vROJO
 
-_ _ EQ fTestStep 9 
+ _ _ EQ fTestStep 18 
         LET Verb vO
 
-_ _ EQ fTestStep 10 
+ _ _ EQ fTestStep 20 
         LET Verb vpulsar
         LET Noun1 vboton
         LET Adject1 vVERDE
-_ _ EQ fTestStep 11 
+
+ _ _ EQ fTestStep 22 
         LET Verb vO
-_ _ EQ fTestStep 12 
+
+ _ _ EQ fTestStep 23
+        LET Verb vEX
+        LET Noun1 vcielo 
+
+ _ _ EQ fTestStep 24 
         LET Verb vO
-_ _ EQ fTestStep 13  
+
+ _ _ EQ fTestStep 26  
         LET Verb vO
-_ _ EQ fTestStep 14
+
+ _ _ EQ fTestStep 28
         LET Verb vO
-_ _ EQ fTestStep 15
+
+ _ _ EQ fTestStep 30
         LET Verb vEX
         LET Noun1 vpuerta
-_ _ EQ fTestStep 16 
+
+ _ _ EQ fTestStep 32
         LET Verb vabrir
         LET Noun1 vpuerta
-_ _ EQ fTestStep 17
+
+ _ _ EQ fTestStep 34
         LET Verb vCOGER
         LET Noun1 vpuerta
-_ _ EQ fTestStep 18
+
+ _ _ EQ fTestStep 36
         LET Verb vEX
         LET Noun1 vteclado
-_ _ EQ fTestStep 19
+
+ _ _ EQ fTestStep 38
         LET Verb vTOCAR
         LET Noun1 vteclado
-_ _ EQ fTestStep 20
+
+ _ _ EQ fTestStep 40
         LET Verb vEX
         LET Noun1 vcanon
 
-_ _ EQ fTestStep 21
+ _ _ EQ fTestStep 42
         LET Verb vteclear
         LET Noun1 vteclado
 
-_ _ EQ fTestStep 22
+ _ _ EQ fTestStep 44
         LET Verb vteclear
         LET Noun1 vteclado
 
-_ _ EQ fTestStep 23
+ _ _ EQ fTestStep 46
         LET Verb vteclear
         LET Noun1 vteclado
 
-_ _ EQ fTestStep 24
+ _ _ EQ fTestStep 48
         LET Verb vteclear
         LET Noun1 v32768
 
-_ _ EQ fTestStep 25
+ _ _ EQ fTestStep 50
         LET Verb vEX
         LET Noun1 vcanon
 
-_ _ EQ fTestStep 26
+ _ _ EQ fTestStep 52
         LET Verb vO
 
-_ _ EQ fTestStep 27
+ _ _ EQ fTestStep 54
         LET Verb vEX
         LET Verb vpaquete
 
-_ _ EQ fTestStep 27
+ _ _ EQ fTestStep 56
         LET Verb vO
 
-_ _ EQ fTestStep 28
+ _ _ EQ fTestStep 58
         LET Verb vCOGER
         LET Noun1 vpaquete
-_ _ EQ fTestStep 29
+
+ _ _ EQ fTestStep 60
         LET Verb vCOGER
         LET Noun1 vpaquete
         LET Adject1 vAZUL 
 
-_ _ EQ fTestStep 30
+ _ _ EQ fTestStep 62
         LET Verb vEX
         LET Noun1 vpaquete
 
-_ _ EQ fTestStep 31
+ _ _ EQ fTestStep 64
         LET Verb vEX
         LET Noun1 vpaquete
-_ _ EQ fTestStep 32
+
+ _ _ EQ fTestStep 66
         LET Verb vCOGER
         LET Noun1 vpaquete        
-_ _ EQ fTestStep 33
+
+ _ _ EQ fTestStep 68
         LET Verb vE
-_ _ EQ fTestStep 34
+
+ _ _ EQ fTestStep 70
         LET Verb vE
-_ _ EQ fTestStep 35
+
+ _ _ EQ fTestStep 72
         LET Verb vE
-_ _ EQ fTestStep 36
+
+ _ _ EQ fTestStep 74
         LET Verb vE
-_ _ EQ fTestStep 37 
+
+ _ _ EQ fTestStep 76
         LET Verb vpulsa
         LET Noun1 vboton
         LET Adject1 vROJO
-_ _ EQ fTestStep 38
+
+ _ _ EQ fTestStep 78
         LET Verb vQUITAR
         LET Noun1 vtraje
-_ _ EQ fTestStep 39
+
+ _ _ EQ fTestStep 80
         LET Verb vDEJAR
         LET Noun1 vtraje
 
-_ _ EQ fTestStep 40
+ _ _ EQ fTestStep 82
         LET Verb vE
-_ _ EQ fTestStep 41
+ _ _ EQ fTestStep 84
         LET Verb vS
 
-_ _ EQ fTestStep 42
+ _ _ EQ fTestStep 86
     LET fTesting 0
 
-_ _ PLUS fTestStep 1
+ _ _ PLUS fTestStep 1
+
+#endif 
+

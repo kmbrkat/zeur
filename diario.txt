@@ -1,19 +1,41 @@
-ZEUR 
+ZHL
 ====================
-TODO: 
+TODO: 	
+	- Mensaje de: No llevo nada en lugar del que se muestra por defecto.
 	- Listar el inventario en fila añadiendo (puesto), (encendido),etc	
-	- Completar todas las descripciones 	
 	- En el listado de objetos no se muestran aquellos como Concealed
-	- Menú de ayuda 
+	- Montar fichero TAP para Spectrum
+	- Colores en la fuente cuando habla el ordenador 
+	- Pantalla de carga...
 	- Cambir la fuente típica del DAAD 
-	
+
+10.03.2019 
+	> Un poco más de test...
+	Algunos detalles sueltos:
+	En la nave
+	+	x interior
+	en el exterior
+	+ x cielo
+	+x cristales
+	+x europa
+	+x techo...
+	+x paredes...
+	+ el ordenador sigue hablando delante del almacén
+	+teclear 32768 no funciona...
+	+parece que el mensaje de (en el teclado) se queda activado...
+	+teclear 32768 en el teclado sí funciona...
+	en el almacén
+	+coger contenedor
+	> ¡Pero el juego se puede terminar! :-)
+	> Versión de Spectrum funcionando sin problemas.
+
 03.03.2019
-	> Teclado numérico funciona
-	> Si la compuerta se abre no podemos volver al interior de la nave 
-	> Poner el traje si está presente lo coje primero
-	> Añadido testeo automático, se acabó teclear los comandos :-) 
-	> Añadir colores para las conversaciones con el ordenador...
-	> Fin de juego al recuperar el paquete
+> Teclado numérico funciona
+> Si la compuerta se abre no podemos volver al interior de la nave 
+> Poner el traje si está presente lo coje primero
+> Añadido testeo automático, se acabó teclear los comandos :-) 
+> Añadir colores para las conversaciones con el ordenador...
+> Fin de juego al recuperar el paquete
 	
 02.03.2019 
  Muchísimo trabajo y apenas puedo dormir, veamos si puedo avanzar un poco.
@@ -40,8 +62,7 @@ Flag 28 bit 7 -> Atributo 255
 los atributos en flags y copiarlos sobre el Fag 59 y 58 para que funcione
 el HAS HASN
 	+ La comprobacion de la apertura de la compuerta no funciona
-	+ No se puede ir al interior de la nave con el traje puesto. Hay que quitárselo
-	y dejarlo siempre en la esclusa. 
+	+ No se puede ir al interior de la nave con el traje puesto. Hay que quitárselo y dejarlo siempre en la esclusa. 
 
 25.02.2019 
 > Más descripciones, vocabulario y movimientos entre localidades

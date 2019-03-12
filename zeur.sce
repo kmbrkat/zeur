@@ -1,10 +1,9 @@
-; BLANK.SCE base de datos vac¡a para DAAD V2
+
 ;
-; En esta base de datos se muestra una forma de adaptar el sistema del PAW y
-; del DAAD V1 al del DAAD V2. Notese que las banderas que se decrementaban
-; autom ticamente ya no lo hacen.
-;
-;
+; ZHL. Escrita por KMBR.
+; 2016-2019 KMBR
+; ZHL is licensed under a Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)  license.
+; http://creativecommons.org/licenses/by-nc-sa/4.0/
 #include C:\zeur\symbols.sce
 #include C:\zeur\zeur_def.sce
 /CTL    ;Secci¢n de control
